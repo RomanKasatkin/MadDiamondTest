@@ -1,3 +1,3 @@
 # MadDiamondTest
-Версия Unity 2019.1.0
-Жизней у жертвы 10
+Unity Version 2019.1.0
+Idle NPC has 10 Lifes
