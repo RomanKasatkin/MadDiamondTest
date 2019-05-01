@@ -37,13 +37,16 @@ public class MoodController : MonoBehaviour
             randomMoovement.enabled = false;
             atackMod.enabled = true;
             atackMod.isActive = true;
-            
+            Renderer rend = GetComponent<Renderer>();            
+            rend.material.SetColor("_Color", Color.red);
         }
         else
         {
             randomMoovement.enabled = true;
             atackMod.enabled = false;
             atackMod.isActive = false;
+            Renderer rend = GetComponent<Renderer>();
+            rend.material.SetColor("_Color", Color.green);
         }
     }
 }

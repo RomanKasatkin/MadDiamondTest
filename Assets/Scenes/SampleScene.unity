@@ -603,7 +603,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1a6518d169ce99d469bfa9c790a2d326, type: 2}
+  - {fileID: 2100000, guid: de7ccf44d03e61e4a96133982b6ac0b5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -696,7 +696,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActive: 0
-  speed: 7.03
+  speed: 7
   bullet: {fileID: 2441577225877710226, guid: bb91b9eae6ec7a24e83eea8768102415, type: 3}
   bulletSpeed: 41.06
   fireRate: 0.44
@@ -714,7 +714,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 3
+  m_Radius: 6
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &532139322
 Rigidbody:
@@ -1268,7 +1268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99b994260051c834fa8829c8dd26cf2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10.54
+  speed: 20
   timer: 0
   newtarget: 1
   nav: {fileID: 0}

@@ -34,16 +34,18 @@ public class AtackMod : MonoBehaviour
     {
         if (target != null)
         {
+            gameObject.transform.LookAt(new Vector3(target.transform.position.x, gameObject.transform.position.y, target.transform.position.z));
             if (!targetLocked)
-            {
-                Debug.Log("follow");
-                gameObject.transform.LookAt(new Vector3(target.transform.position.x, gameObject.transform.position.y, target.transform.position.z));
+            {                              
                 gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, target.transform.position, speed * Time.deltaTime);
             }
             else
             {
-                gameObject.transform.LookAt(new Vector3(target.transform.position.x, gameObject.transform.position.y, target.transform.position.z));
-                gameObject.transform.position = gameObject.transform.position;
+                if (Vector3.Distance(gameObject.transform.position, target.transform.position) >= 4)
+                    gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, target.transform.position, speed * Time.deltaTime);
+                else
+                    gameObject.transform.Translate(Vector3.zero);
+                
                 fireTimer -= Time.deltaTime;
                 if (fireTimer <= 0)
                 {
@@ -57,7 +59,7 @@ public class AtackMod : MonoBehaviour
             gameObject.GetComponent<MoodController>().SetIdle();
         }
     }
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (isActive)
         {
@@ -66,7 +68,7 @@ public class AtackMod : MonoBehaviour
                 targetLocked = true;                
             }
         }
-    }
+    }    
 
     private void OnTriggerExit(Collider other)
     {

@@ -9,8 +9,6 @@ ScriptsOnlyBuild:
     - RandomMoovement
     NavMeshComponents.dll:
     - UnityEngine.AI.NavMeshSurface
-    NavMeshComponentsEditor.dll:
-    - UnityEditor.AI.NavMeshAssetManager
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
@@ -91,15 +89,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9964}
     - Class: 114
-      Script: {instanceID: 10118}
+      Script: {instanceID: 9978}
     - Class: 114
-      Script: {instanceID: 10396}
+      Script: {instanceID: 10120}
     - Class: 114
-      Script: {instanceID: 10488}
+      Script: {instanceID: 10398}
     - Class: 114
-      Script: {instanceID: 10860}
+      Script: {instanceID: 10490}
     - Class: 114
-      Script: {instanceID: 21748}
+      Script: {instanceID: 10862}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -703,6 +701,12 @@ ScriptsOnlyBuild:
     className: RandomMoovement
   - hash:
       serializedVersion: 2
+      Hash: f291bf89662e8aa3e94dd0c3e4cc5997
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Health
+  - hash:
+      serializedVersion: 2
       Hash: b3ab2106268377ffe25dd18ac23dca28
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -923,12 +927,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: f291bf89662e8aa3e94dd0c3e4cc5997
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Health
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
