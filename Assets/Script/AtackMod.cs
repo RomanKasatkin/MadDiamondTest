@@ -37,15 +37,10 @@ public class AtackMod : MonoBehaviour
             gameObject.transform.LookAt(new Vector3(target.transform.position.x, gameObject.transform.position.y, target.transform.position.z));
             if (!targetLocked)
             {                              
-                gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, target.transform.position, speed * Time.deltaTime);
+               gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, target.transform.position, speed * Time.deltaTime);
             }
             else
-            {
-                if (Vector3.Distance(gameObject.transform.position, target.transform.position) >= 4)
-                    gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, target.transform.position, speed * Time.deltaTime);
-                else
-                    gameObject.transform.Translate(Vector3.zero);
-                
+            {  
                 fireTimer -= Time.deltaTime;
                 if (fireTimer <= 0)
                 {
@@ -59,7 +54,7 @@ public class AtackMod : MonoBehaviour
             gameObject.GetComponent<MoodController>().SetIdle();
         }
     }
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (isActive)
         {

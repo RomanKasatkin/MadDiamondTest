@@ -9,6 +9,8 @@ ScriptsOnlyBuild:
     - RandomMoovement
     NavMeshComponents.dll:
     - UnityEngine.AI.NavMeshSurface
+    NavMeshComponentsEditor.dll:
+    - UnityEditor.AI.NavMeshAssetManager
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
@@ -911,7 +913,7 @@ ScriptsOnlyBuild:
     className: TMP_SubMesh
   - hash:
       serializedVersion: 2
-      Hash: c02dd4226a4f411f20d6f448f0da0c5a
+      Hash: de675cc3b6b3be7d2ab2583fb5b83717
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MoodController
